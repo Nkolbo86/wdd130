@@ -1,0 +1,42 @@
+/* Main section styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Styling for aside element */
+  aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+  
+  /* Image inside aside */
+  aside img {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* More exclusive selector for profile image */
+  main img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Paragraph styling */
+  p {
+    padding: 0;
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: 20px; /* Adds top margin to separate from the main content */
+    border-top: 2px solid #333; /* Adds a top border for distinction */
+    text-align: center; /* Centers the text inside the footer */
+    padding: 10px; /* Optional: Adds some padding for spacing inside the footer */
+}
+
+  
