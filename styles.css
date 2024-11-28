@@ -22,14 +22,22 @@ header {
   text-align: center;
 }
 
-header nav a {
+/* Navigation styles */
+nav {
+  background-color: #028090; /* Accent1 color */
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+nav a {
   color: white;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
 }
 
-header nav a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
@@ -62,6 +70,15 @@ main ul.box li {
   margin-bottom: 10px;
 }
 
+/* h1 Styling */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #05668d; /* Primary color */
+  margin-bottom: 20px;
+}
+
 /* Aside styles */
 aside {
   width: 90%;
@@ -71,7 +88,6 @@ aside {
   border: 1px solid #ddd;
   background-color: #028090; /* Accent1 color */
   color: white;
-  position: relative;
 }
 
 aside img {
@@ -82,9 +98,6 @@ aside img {
 }
 
 aside h2 {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   font-size: 1.5rem;
   color: #f0f3bd; /* Light background color for contrast */
 }
@@ -111,9 +124,6 @@ footer p {
   }
 
   aside h2 {
-    position: relative;
-    top: auto;
-    left: auto;
     text-align: center;
   }
 }
