@@ -1,41 +1,119 @@
-/* Main section styling */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Styling for aside element */
-  aside {
-    width: 300px;
-    margin: 20px auto;
-    border: 2px solid #333;
-    padding: 10px;
-    background-color: #f0f0f0;
-    color: #333;
-}
-  
-  /* Image inside aside */
-  aside img {
-    width: 200px;
-    height: auto;
-  }
-  
-  /* More exclusive selector for profile image */
-  main img {
-    width: 150px;
-    height: auto;
-  }
-  
-  /* Paragraph styling */
-  p {
-    padding: 0;
-  }
-  
-  /* Footer styling */
-  footer {
-    margin-top: 20px; /* Adds top margin to separate from the main content */
-    border-top: 2px solid #333; /* Adds a top border for distinction */
-    text-align: center; /* Centers the text inside the footer */
-    padding: 10px; /* Optional: Adds some padding for spacing inside the footer */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 10px;
+}
+
+/* Header styles */
+header {
+  background-color: #05668d; /* Primary color */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+main img {
+  width: 150px;
+  height: auto;
+  float: right;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+main ul.box {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+main ul.box li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f3bd; /* Light background color */
+  margin-bottom: 10px;
+}
+
+/* Aside styles */
+aside {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #028090; /* Accent1 color */
+  color: white;
+  position: relative;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+aside h2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: #f0f3bd; /* Light background color for contrast */
+}
+
+/* Footer styles */
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+  text-align: center;
+  background-color: #05668d; /* Primary color */
+  color: white;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  main img {
+    float: none;
+    margin: 0 auto 20px;
+  }
+
+  aside h2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+  }
+}
