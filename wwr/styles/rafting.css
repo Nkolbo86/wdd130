@@ -1,167 +1,249 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  /* Header Section */
-  header {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    background-color: #05668D; /* Primary color */
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  #logo {
-    width: 80px;
-    height: auto;
-  }
-  
-  header h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-  }
-  
-  nav ul li a {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #F0F3BD; /* Accent2 color for hover effect */
-  }
-  
-  /* Main Intro Section */
-  #intro {
-    text-align: center;
-    padding: 20px;
-    background-color: #F0F3BD; /* Accent2 color */
-  }
-  
-  #intro img {
-    float: right;
-    width: 250px;
-    height: auto;
-    margin: 0 0 10px 20px;
-    border: 2px solid #ddd;
-  }
-  
-  #intro h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #028090; /* Accent1 color */
-  }
-  
-  /* History Section */
-  #history {
-    padding: 20px;
-    background-color: #00A896; /* Secondary color */
-    color: white;
-  }
-  
-  #history h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #history .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #history img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    border: 3px solid #05668D; /* Primary color for border */
-  }
-  
-  /* Adventures Section */
-  #adventures {
-    padding: 20px;
-    background-color: #F0F3BD; /* Accent2 color */
-  }
-  
-  #adventures h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #028090; /* Accent1 color */
-  }
-  
-  #adventures .adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-  
-  #adventures figure {
-    padding: 10px;
-    background-color: #FFFFFF; /* White for figure background */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  #adventures img {
-    width: 100%;
-    height: auto;
-  }
-  
-  #adventures figcaption {
-    margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  /* Footer Section */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #028090; /* Accent1 color */
-    color: white;
-    padding: 20px;
-  }
-  
-  footer p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-  }
-  
-  #social {
-    display: flex;
-    gap: 10px;
-  }
-  
-  #social img {
-    width: 30px;
-    height: auto;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Section */
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background-color: #05668D; /* Primary color */
+  color: white;
+  padding: 10px 20px;
+}
+
+#logo {
+  width: 80px;
+  height: auto;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+nav ul li a {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #F0F3BD; /* Accent2 color for hover effect */
+}
+
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+/* Main Intro Section */
+#intro {
+  text-align: center;
+  padding: 20px;
+  background-color: #F0F3BD; /* Accent2 color */
+}
+
+#intro img {
+  float: right;
+  width: 250px;
+  height: auto;
+  margin: 0 0 10px 20px;
+  border: 2px solid #ddd;
+}
+
+#intro h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #028090; /* Accent1 color */
+}
+
+/* History Section */
+#history {
+  padding: 20px;
+  background-color: #00A896; /* Secondary color */
+  color: white;
+}
+
+#history h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#history .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+#history img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 3px solid #05668D; /* Primary color for border */
+}
+
+/* Adventures Section */
+#adventures {
+  padding: 20px;
+  background-color: #F0F3BD; /* Accent2 color */
+}
+
+#adventures h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #028090; /* Accent1 color */
+}
+
+#adventures .adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+#adventures figure {
+  padding: 10px;
+  background-color: #FFFFFF; /* White for figure background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#adventures img {
+  width: 100%;
+  height: auto;
+}
+
+#adventures figcaption {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Company Information Section */
+#company-info {
+  padding: 20px;
+  background-color: #00A896; /* Secondary color */
+  color: white;
+  text-align: center;
+}
+
+#company-info address {
+  font-style: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#company-info iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 2px solid #05668D; /* Primary color */
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Employee Profiles Section */
+#employees {
+  padding: 20px;
+  background-color: #F0F3BD; /* Accent2 color */
+}
+
+#employees h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #028090; /* Accent1 color */
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.employee-grid figure {
+  padding: 10px;
+  background-color: #FFFFFF; /* White for figure background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.employee-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.employee-grid figcaption {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Contact Form Section */
+#contact-form {
+  padding: 20px;
+  background-color: #FFFFFF; /* White for form background */
+}
+
+#contact-form h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #05668D; /* Primary color */
+}
+
+#contact-form form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact-form textarea {
+  resize: vertical;
