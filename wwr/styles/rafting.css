@@ -5,11 +5,21 @@
   box-sizing: border-box;
 }
 
+/* Variables for Colors and Fonts */
+:root {
+  --primary-color: #05668D; /* Dark Blue */
+  --secondary-color: #00A896; /* Teal */
+  --accent1-color: #028090; /* Medium Teal */
+  --accent2-color: #F0F3BD; /* Light Yellow */
+  --text-color: #333333; /* Dark Gray */
+  --white: #FFFFFF;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--accent2-color);
+  color: var(--text-color);
 }
 
 /* Header Section */
@@ -17,13 +27,13 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  background-color: #05668D; /* Primary color */
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   padding: 10px 20px;
 }
 
-#logo {
-  width: 80px;
+header img#logo {
+  width: 100px; /* Increased logo size */
   height: auto;
 }
 
@@ -33,193 +43,132 @@ header h1 {
   font-size: 1.8rem;
 }
 
-nav ul {
+header nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
 }
 
-nav ul li a {
+header nav ul li a {
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
-  color: #F0F3BD; /* Accent2 color for hover effect */
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--accent2-color);
 }
 
-nav ul li a.active {
-  text-decoration: underline;
-}
-
-/* Main Intro Section */
-#intro {
+/* Hero Section */
+.hero {
   text-align: center;
   padding: 20px;
-  background-color: #F0F3BD; /* Accent2 color */
 }
 
-#intro img {
-  float: right;
-  width: 250px;
-  height: auto;
-  margin: 0 0 10px 20px;
-  border: 2px solid #ddd;
-}
-
-#intro h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #028090; /* Accent1 color */
+/* Happy Client Image */
+.hero article img {
+  display: block;
+  margin: 20px auto; /* Centers the image */
+  max-width: 100%; /* Ensures it doesn't overflow the container */
+  max-height: 300px; /* Sets a reasonable height */
+  width: auto; /* Maintains aspect ratio */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: adds a rounded corner for aesthetics */
 }
 
 /* History Section */
 #history {
   padding: 20px;
-  background-color: #00A896; /* Secondary color */
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+#history h2,
+#history p {
+  text-align: center; /* Centered text */
 }
 
 #history h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 2rem;
   margin-bottom: 20px;
-}
-
-#history .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  text-align: center;
-}
-
-#history img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  border: 3px solid #05668D; /* Primary color for border */
 }
 
 /* Adventures Section */
 #adventures {
   padding: 20px;
-  background-color: #F0F3BD; /* Accent2 color */
+  background-color: var(--accent2-color);
 }
 
 #adventures h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #028090; /* Accent1 color */
+  color: var(--accent1-color);
 }
 
 #adventures .adventure-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
   gap: 20px;
 }
 
 #adventures figure {
+  background-color: var(--white);
   padding: 10px;
-  background-color: #FFFFFF; /* White for figure background */
   border: 1px solid #ddd;
   border-radius: 5px;
+  text-align: center;
 }
 
-#adventures img {
-  width: 100%;
-  height: auto;
+#adventures figure img {
+  width: 100%; /* Uniform width */
+  height: 150px; /* Uniform height */
+  object-fit: cover; /* Crops while maintaining aspect ratio */
+  border-radius: 5px;
 }
 
-#adventures figcaption {
+#adventures figure figcaption {
   margin-top: 10px;
-  font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--text-color);
 }
 
-/* Company Information Section */
-#company-info {
+/* Footer Section */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  background-color: #00A896; /* Secondary color */
-  color: white;
-  text-align: center;
+  background-color: var(--accent1-color);
+  color: var(--white);
 }
 
-#company-info address {
-  font-style: normal;
-  line-height: 1.5;
-  margin-bottom: 20px;
+footer #social {
+  display: flex;
+  gap: 10px;
 }
 
-#company-info iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
-  border: 2px solid #05668D; /* Primary color */
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-/* Employee Profiles Section */
-#employees {
-  padding: 20px;
-  background-color: #F0F3BD; /* Accent2 color */
-}
-
-#employees h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #028090; /* Accent1 color */
-}
-
-.employee-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  text-align: center;
-}
-
-.employee-grid figure {
-  padding: 10px;
-  background-color: #FFFFFF; /* White for figure background */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.employee-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.employee-grid figcaption {
-  margin-top: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
-  color: #333;
+footer #social img {
+  width: 25px; /* Smaller and consistent size */
+  height: 25px; /* Ensures uniformity */
+  border-radius: 5px; /* Optional for rounded edges */
 }
 
 /* Contact Form Section */
 #contact-form {
   padding: 20px;
-  background-color: #FFFFFF; /* White for form background */
+  background-color: var(--white);
+  text-align: center;
 }
 
 #contact-form h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #05668D; /* Primary color */
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 #contact-form form {
@@ -230,20 +179,358 @@ nav ul li a.active {
 }
 
 #contact-form label {
-  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
+#contact-form input,
 #contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   width: 100%;
+}
+
+#contact-form button {
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background-color: var(--accent1-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Centered Contact Information */
+#company-info {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+#company-info iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: none;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Employee Profiles Section */
+#employees {
+  padding: 20px;
+  background-color: var(--accent2-color);
+}
+
+#employees h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: var(--accent1-color);
+}
+
+.employee-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.employee-grid figure {
+  text-align: center;
+  max-width: 200px;
+}
+
+.employee-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.employee-grid figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Contact Form Section */
+#contact-form {
+  padding: 20px;
+  background-color: var(--white);
+}
+
+#contact-form h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+#contact-form form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#contact-form button {
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background-color: var(--accent1-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer Social Icons */
+footer #social img {
+  width: 25px;
+  height: auto;
+}
+
+.employee-grid img {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height to maintain uniformity */
+  object-fit: cover; /* Ensures the image fills the dimensions without distortion */
+  border-radius: 5px; /* Keep the rounded corners */
+}
+
+/* Call to Action Section */
+.cta {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent1-color);
+  color: var(--white);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Trip Grid */
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.trip-grid article {
+  text-align: center;
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.trip-grid article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Trip Table */
+#trip-table {
+  padding: 20px;
+  text-align: center;
+}
+
+#trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#trip-table th, #trip-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#trip-table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+#trip-table td {
+  background-color: var(--accent2-color);
+  color: var(--text-color);
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+}
+
+#hero img#hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: var(--white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Newsletter Section */
+#newsletter {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent2-color);
+  color: var(--text-color);
+}
+
+#newsletter form {
+  display: grid;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#newsletter input,
+#newsletter button {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-#contact-form textarea {
-  resize: vertical;
+#newsletter button {
+  background-color: var(--accent1-color);
+  color: var(--white);
+  cursor: pointer;
+}
+
+#newsletter button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Call to Action Section */
+#call-to-action {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--accent2-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Offerings Section */
+#offerings .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center;
+  text-align: center; /* Centers content inside each article */
+}
+
+#offerings article {
+  text-align: center;
+}
+
+#offerings img {
+  width: 100%;
+  height: 600px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#offerings h3 {
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+#offerings p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+#offerings h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1920px; /* Limit maximum size to reduce stretching on larger screens */
+  height: auto;
+  object-fit: cover; /* Ensures proper scaling without distortion */
+  display: block;
+  margin: 0 auto;
+}
+
